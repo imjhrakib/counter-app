@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Counter App</title>
 </head>
-<body>
-  <h1>Real-time Number Increment App</h1>
-  <h4 id="count">0</h4>
-  <button onclick="increase()">Increase</button>
-  <button onclick="decrease()">Decrease</button>
-  <button onclick="reset()">Reset</button>
+<body class="text-center mt-12 bg-[#f3e5f5]">
+  <h1 class="text-7xl">Real-time Number <br> Increment App</h1>
+  <h4 class="count text-7xl mt-6 mb-7 max-w-52 mx-auto">0</h4>
+  <div class="text-6xl flex justify-center gap-7">
+    <button onclick="increase(); changeIncreaseBtn(); noDecRe(); changeCountGreen()" id="increased" class="border-2 p-5">Increase</button>
+  <button onclick="decrease(); changeDecreaseBtn(); noIncRe(); changeCountRed()" id="decreased" class="border-2 p-5">Decrease</button>
+  <button onclick="reset(); changeResetBtn(); noIncDec(); changeCountBlack()" id="reset" class="border-2 p-5">Reset</button>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
